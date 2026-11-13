@@ -43,15 +43,3 @@ Findings      : 6
 [MEDIUM]   Username enumeration from 203.0.113.44  (T1590)
 [MEDIUM]   Off-hours login: 'uman' from 198.51.100.99 at 03:12  (T1078)
 ```
-
-## The part that took the longest
-
-Picking a region and a size. Azure for Students applies a policy called "Allowed resource deployment regions" that limits each subscription to a small list of regions, and the list is different for every student. Mine is Canada Central, Denmark East, Belgium Central, Germany West Central, and Sweden Central. There is no US region on it.
-
-The smallest size, Standard_B1s, was not available in East US, Canada Central, or Germany West Central for this subscription. It worked in Denmark East, so that is where the VM lives.
-
-If you are on a student subscription and a size shows as not available, check your own allowed list first. In the Azure portal, search for Policy, open Assignments, open "Allowed resource deployment regions", and read the allowed locations under Parameters. Then try the sizes in one of those regions.
-
-## Stopping the VM
-
-When I am done using it, I stop the VM in the Azure portal. Stopping it deallocates it and stops the compute charges. The VM can be started again the same way next time.
